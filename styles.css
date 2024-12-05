@@ -35,6 +35,11 @@ header {
   align-items: center;
   padding: 22px 128px;
 
+  @media screen and (max-width: 768px) {
+    padding: 22px 23px;
+
+  }
+
   /*  background-color: black; */
   /* margin: 0 auto; */
   nav {
@@ -110,6 +115,27 @@ header {
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      .sp-divider {
+        display: none;
+      }
+
+      .sp-nav-container {
+        flex-wrap: wrap;
+        justify-content: end;
+      }
+
+      .sp-links {
+        width: 100%;
+
+        ul {
+          justify-content: end;
+
+        }
+      }
+
+    }
   }
 }
 
@@ -127,11 +153,24 @@ header {
   position: relative;
   padding: 0 128px;
 
+  @media screen and (max-width: 768px) {
+    padding: 156px 97px;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    height: 1090px;
+    background-position-x: -4000;
+  }
 
   .sp-cutoffs {
     position: absolute;
     width: 100%;
     bottom: 0;
+    left: 0;
+
+    @media screen and (max-width: 768px) {
+      width: 170%;
+    }
   }
 
   .sp-curve-1 {
@@ -160,6 +199,10 @@ header {
       color: white;
     }
 
+    .sp-t-br {
+      display: none;
+    }
+
     span {
       -webkit-text-stroke: 1px white;
       color: transparent;
@@ -172,7 +215,23 @@ header {
       font-size: 14px;
       font-weight: 400;
       line-height: 24px;
-      margin-bottom: 172px;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+
+      p {
+        width: 100%;
+      }
+
+      .sp-t-br {
+        display: block;
+      }
+
+      .sp-d-br {
+        display: none;
+      }
     }
   }
 
@@ -285,6 +344,7 @@ header {
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 100;
+
             .sp-error-icon {
               position: absolute;
               width: 100%;
@@ -384,6 +444,11 @@ header {
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 768px) {
+    padding: 80px 23px 0px 23px;
+
+  }
+
   .sp-about__img-container {
     width: 100%;
     display: flex;
@@ -395,6 +460,11 @@ header {
     img {
       width: 371px;
       height: 180px;
+
+      @media screen and (max-width: 768px) {
+        width: 224px;
+        height: 128px;
+      }
     }
   }
 
@@ -430,9 +500,12 @@ header {
 
     .sp-about__text-summary {
       display: flex;
-      flex-direction: row;
       gap: 36px;
 
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 24px;
+      }
 
       .sp-about__text-summary-1,
       .sp-about__text-summary-2,
@@ -444,45 +517,64 @@ header {
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
         width: 370px;
+
+        @media screen and (max-width: 768px) {
+          width: 348px;
+        }
       }
 
-      .sp-about__text-summary-btn {
-        .sp-btn {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
-          margin-top: 10px;
-          width: 370px;
-          height: 52px;
-          background-color: #f5f5f5;
-          color: var(--primary);
-          font-size: 18px;
-          font-weight: 700;
-          line-height: 28px;
-          text-align: left;
-          text-underline-position: from-font;
-          text-decoration-skip-ink: none;
-          border: 2px solid var(--primary);
-          text-align: center;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: all 0.3s ease;
+      .sp-about-btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
 
-          &:hover {
-            box-shadow: 0px 8px 6px 0px #00000014;
-          }
-
-          &:active {
-            box-shadow: 0px 4px 6px 0px #00000014;
-          }
-
-          img {
-            /* Ensure images inside buttons align properly */
-            width: auto;
-            height: 20px;
-          }
+        @media screen and (max-width: 768px) {
+          gap: 24px;
+          flex-direction: row;
         }
+      }
+
+
+      .sp-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+        width: 370px;
+        height: 52px;
+        background-color: #f5f5f5;
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border: 2px solid var(--primary);
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        @media screen and (max-width: 768px) {
+          width: 348px;
+        }
+
+        &:hover {
+          box-shadow: 0px 8px 6px 0px #00000014;
+        }
+
+        &:active {
+          box-shadow: 0px 4px 6px 0px #00000014;
+        }
+
+        img {
+          /* Ensure images inside buttons align properly */
+          width: auto;
+          height: 20px;
+        }
+
       }
     }
   }
@@ -497,6 +589,11 @@ header {
   padding: 100px 128px 180px 128px;
   background-color: #f9f9f9;
 
+  @media screen and (max-width: 768px) {
+    padding: 100px 24px 100px 24px;
+
+  }
+
   /* Carousel Wrapper */
   .sp-testimonial-carousel {
     display: flex;
@@ -507,6 +604,10 @@ header {
 
     max-width: 1185px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 
   /* Testimonial Content */
@@ -539,6 +640,12 @@ header {
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px 0 0 12px;
+
+    @media screen and (max-width: 768px) {
+      width: 197px;
+      height: 197px;
+
+    }
   }
 
   .sp-testimonial-text {
@@ -555,6 +662,21 @@ header {
 
     border-radius: 0 12px 12px 0;
 
+    .sp-t-br {
+      display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 496px;
+      height: 197px;
+      padding: 33px 36px 33px 37px;
+      gap: 8px;
+
+      .sp-t-br {
+        display: block;
+      }
+    }
+
     .sp-quotes {
       position: absolute;
       top: 38px;
@@ -562,6 +684,13 @@ header {
       width: 60px;
       height: 47px;
       color: white;
+
+      @media screen and (max-width: 768px) {
+        top: 19px;
+        right: 36px;
+        width: 40px;
+        height: 31px;
+      }
     }
 
     h3 {
@@ -575,6 +704,12 @@ header {
       font-size: 18px;
       line-height: 28px;
       font-style: italic;
+
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 24px;
+
+      }
     }
   }
 
@@ -594,7 +729,11 @@ header {
     font-size: 1.5rem;
     padding: 0.5rem;
 
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
+
 
   .sp-carousel-btn {
     width: 48px;
@@ -638,6 +777,14 @@ header {
   padding: 0 127px 100px 128px;
   background-color: #f5f5f5;
 
+  @media screen and (max-width: 768px) {
+    padding: 0 23px 100px 23px;
+
+    .sp-d-br {
+      display: none;
+    }
+  }
+
   .sp-wrapper {
     max-width: 1185px;
     display: flex;
@@ -668,6 +815,11 @@ header {
     margin-bottom: 36px;
     justify-content: start;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
   }
 
   .sp-summary {
@@ -675,6 +827,11 @@ header {
     line-height: 28px;
     font-style: italic;
     font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+    }
   }
 
   .sp-paragraph {
@@ -685,6 +842,10 @@ header {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     width: 370px;
+    @media screen and (max-width: 768px) {
+      width: 348px;
+      
+    }
   }
 
   .sp-info {
@@ -693,6 +854,10 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     gap: 36px;
+    @media screen and (max-width: 768px) {
+      gap: 24px;
+      
+    }
   }
 
   .sp-info-card {
@@ -710,7 +875,11 @@ header {
     font-size: 18px;
     line-height: 28px;
     text-align: center;
-    color: var(--text)
+    color: var(--text);
+    @media screen and (max-width: 768px) {
+      width: 348px;
+      
+    }
   }
 
   .sp-info-container {
