@@ -21,7 +21,7 @@ body {
   --gradient2: #3e69609e;
 }
 
-.weight-800 {
+.sp-weight-800 {
   font-weight: 800;
 }
 
@@ -45,13 +45,13 @@ header {
     flex-direction: row;
     justify-content: space-between;
 
-    .nav-container {
+    .sp-nav-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
 
-      .links {
+      .sp-links {
         ul {
           list-style: none;
           display: flex;
@@ -81,7 +81,7 @@ header {
               }
             }
 
-            .active {
+            .sp-active {
               text-decoration: underline;
               opacity: 100%;
               font-weight: 700;
@@ -90,14 +90,14 @@ header {
         }
       }
 
-      .divider {
+      .sp-divider {
         opacity: 50%;
         color: white;
         margin-left: 31px;
         margin-right: 46px;
       }
 
-      .call-to-action {
+      .sp-call-to-action {
         p {
           font-weight: 700;
           font-size: 14px;
@@ -113,7 +113,7 @@ header {
   }
 }
 
-.hero {
+.sp-hero {
   background-image: url(./assets/hero-background.png);
   background-size: cover;
   background-position: center;
@@ -128,26 +128,26 @@ header {
   padding: 0 128px;
 
 
-  .cutoffs {
+  .sp-cutoffs {
     position: absolute;
     width: 100%;
     bottom: 0;
   }
 
-  .curve-1 {
+  .sp-curve-1 {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
 
-  .curve-2 {
+  .sp-curve-2 {
     position: absolute;
     bottom: 0;
     width: 100%;
     margin-bottom: -2px;
   }
 
-  .hero-body__text {
+  .sp-hero-body__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,7 +176,7 @@ header {
     }
   }
 
-  .hero-body__form {
+  .sp-hero-body__form {
 
     display: flex;
     flex-direction: column;
@@ -206,21 +206,21 @@ header {
         padding-bottom: 34px;
       }
 
-      .input-row {
+      .sp-input-row {
         display: flex;
         flex-direction: row;
         gap: 16px;
         padding: 0 28px;
 
-        .field-group {
+        .sp-field-group {
           width: 100%;
           position: relative;
 
-          .input-container {
+          .sp-input-container {
             position: relative;
             width: 100%;
 
-            .input-field {
+            .sp-input-field {
               width: 100%;
               height: 48px;
               padding: 0 16px;
@@ -236,14 +236,14 @@ header {
               transition: all 0.2s ease-in-out;
             }
 
-            .input-field:focus {
+            .sp-input-field:focus {
               border-color: transparent;
               box-shadow: 0 0 0 1px white;
               background-color: transparent;
               /* focus:ring-2 focus:ring-blue-400 */
             }
 
-            .input-label {
+            .sp-input-label {
               position: absolute;
               left: 0.625rem;
               /* 2.5px */
@@ -252,7 +252,7 @@ header {
               padding: 0 0.25rem;
               background-color: transparent;
               font-size: 1.125rem;
-              /* same as input-field's font-size */
+              /* same as sp-input-field's font-size */
               color: white;
               /* text-zinc-400 */
               cursor: text;
@@ -264,8 +264,8 @@ header {
               text-overflow: ellipsis;
             }
 
-            .input-field:focus+.input-label,
-            .input-field:not(:placeholder-shown)+.input-label {
+            .sp-input-field:focus+.sp-input-label,
+            .sp-input-field:not(:placeholder-shown)+.sp-input-label {
               font-size: 0.75rem;
               /* 12px */
               top: -0.5rem;
@@ -277,74 +277,36 @@ header {
           }
 
           /* Error Styles */
-          .error {
+          .sp-error {
             position: absolute;
-            top: 100%;
-            /* Position below the input */
-            left: 0;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            /* Center the error icon horizontally */
-            align-items: center;
-            gap: 8px;
-            margin-top: 4px;
             visibility: hidden;
             /* Hidden by default */
             opacity: 0;
             transition: opacity 0.3s ease;
             z-index: 100;
-
-            .error-icon {
-              position: relative;
-              /* Establishes positioning context */
-            }
-
-            .error-icon img {
-              width: 100%;
-              height: 100%;
-            }
-
-            .error-icon .error-message {
+            .sp-error-icon {
               position: absolute;
               width: 100%;
-              top: 48%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              /* Center the message */
-              font-size: 13px;
-              /* Adjust font size as needed */
-              line-height: 20px;
-              color: white;
-              /* Ensure text is readable against the icon */
-              text-align: center;
-
               pointer-events: none;
-              /* Allows clicks to pass through */
-              padding: 2px 4px;
-              /* Optional: Add some padding for better readability */
-              background-color: transparent;
-              border-radius: 2px;
-              /* Optional: Rounded corners */
             }
-
           }
 
           /* Show Error on Active Field Group */
-          .error-active .error {
+          .sp-error-active .sp-error {
             visibility: visible;
             opacity: 1;
           }
 
         }
 
-        .field-group.error-active .error {
+        .sp-field-group.sp-error-active .sp-error {
           visibility: visible;
           opacity: 1;
         }
       }
 
-      .dropdown {
+      .sp-dropdown {
         margin: 0 28px;
         padding: 14px 16px;
         background: #ffffff0a;
@@ -372,7 +334,7 @@ header {
         border: 1px solid #ffffff80;
       }
 
-      button {
+      .sp-cta-button {
         align-self: center;
         display: flex;
         justify-content: center;
@@ -399,15 +361,19 @@ header {
           box-shadow: 0px 4px 6px 0px #00000014;
           background-color: #35bb9c;
         }
+
+        img {
+          /* Ensure images inside buttons align properly */
+          width: auto;
+          height: 20px;
+        }
       }
     }
   }
 
 }
 
-
-
-.about {
+.sp-about {
   background-color: #f5f5f5;
   position: relative;
   width: 100%;
@@ -418,7 +384,7 @@ header {
   align-items: center;
   justify-content: center;
 
-  .about__img-container {
+  .sp-about__img-container {
     width: 100%;
     display: flex;
 
@@ -432,8 +398,8 @@ header {
     }
   }
 
-  .about__text {
-    .about__text-title {
+  .sp-about__text {
+    .sp-about__text-title {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -462,15 +428,15 @@ header {
       }
     }
 
-    .about__text-summary {
+    .sp-about__text-summary {
       display: flex;
       flex-direction: row;
       gap: 36px;
 
 
-      .about__text-summary-1,
-      .about__text-summary-2,
-      .about__text-summary-btn {
+      .sp-about__text-summary-1,
+      .sp-about__text-summary-2,
+      .sp-about__text-summary-btn {
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -480,8 +446,8 @@ header {
         width: 370px;
       }
 
-      .about__text-summary-btn {
-        .btn {
+      .sp-about__text-summary-btn {
+        .sp-btn {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -510,6 +476,12 @@ header {
           &:active {
             box-shadow: 0px 4px 6px 0px #00000014;
           }
+
+          img {
+            /* Ensure images inside buttons align properly */
+            width: auto;
+            height: 20px;
+          }
         }
       }
     }
@@ -517,7 +489,7 @@ header {
 }
 
 
-.testimonial-section {
+.sp-testimonial-section {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -526,18 +498,19 @@ header {
   background-color: #f9f9f9;
 
   /* Carousel Wrapper */
-  .testimonial-carousel {
+  .sp-testimonial-carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
 
+    max-width: 1185px;
     width: 100%;
   }
 
   /* Testimonial Content */
-  .carousel-content {
+  .sp-carousel-content {
     display: flex;
     overflow: hidden;
 
@@ -545,7 +518,7 @@ header {
   }
 
   /* Testimonial Item */
-  .testimonial {
+  .sp-testimonial {
     display: none;
     flex-shrink: 0;
     flex-grow: 1;
@@ -555,12 +528,12 @@ header {
     transition: opacity 0.3s ease-in-out;
   }
 
-  .testimonial.active {
+  .sp-testimonial.sp-active {
     display: flex;
     opacity: 1;
   }
 
-  .testimonial-img {
+  .sp-testimonial-img {
     width: 269px;
     height: 269px;
     object-fit: cover;
@@ -568,7 +541,7 @@ header {
     border-radius: 12px 0 0 12px;
   }
 
-  .testimonial-text {
+  .sp-testimonial-text {
     position: relative;
     background-color: var(--background);
     color: white;
@@ -582,7 +555,7 @@ header {
 
     border-radius: 0 12px 12px 0;
 
-    .quotes {
+    .sp-quotes {
       position: absolute;
       top: 38px;
       right: 65px;
@@ -605,7 +578,7 @@ header {
     }
   }
 
-  .carousel {
+  .sp-carousel {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -614,7 +587,7 @@ header {
 
 
   /* Buttons */
-  .carousel-btn {
+  .sp-carousel-btn {
     background-color: #f9f9f9;
     border: none;
     cursor: pointer;
@@ -623,24 +596,24 @@ header {
 
   }
 
-  .carousel-btn {
+  .sp-carousel-btn {
     width: 48px;
     height: 48px;
   }
 
-  .carousel-btn.prev {}
+  .sp-carousel-btn.prev {}
 
-  .carousel-btn.next {}
+  .sp-carousel-btn.next {}
 
   /* Indicators */
-  .carousel-indicators {
+  .sp-carousel-indicators {
     display: flex;
     justify-content: space-between;
     width: 120px;
     margin-top: 3rem;
   }
 
-  .indicator {
+  .sp-indicator {
     width: 22px;
     height: 22px;
     margin: 0 5px;
@@ -650,13 +623,13 @@ header {
     transition: background-color 0.3s;
   }
 
-  .indicator.active {
+  .sp-indicator.sp-active {
     background-color: #5bc8af;
   }
 
 }
 
-.info-section {
+.sp-info-section {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -665,7 +638,7 @@ header {
   padding: 0 127px 100px 128px;
   background-color: #f5f5f5;
 
-  .wrapper {
+  .sp-wrapper {
     max-width: 1185px;
     display: flex;
     flex-direction: column;
@@ -673,7 +646,7 @@ header {
     align-items: center;
   }
 
-  .title {
+  .sp-title {
     font-size: 36px;
     font-weight: 700;
     line-height: 46px;
@@ -683,12 +656,12 @@ header {
     width: 100%;
   }
 
-  .hollow {
+  .sp-hollow {
     -webkit-text-stroke: 1px var(--text);
     color: transparent;
   }
 
-  .paragraph-container {
+  .sp-paragraph-container {
     display: flex;
     gap: 36px;
     margin-top: 32px;
@@ -697,14 +670,14 @@ header {
     width: 100%;
   }
 
-  .summary {
+  .sp-summary {
     font-size: 18px;
     line-height: 28px;
     font-style: italic;
     font-weight: 400;
   }
 
-  .paragraph {
+  .sp-paragraph {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -714,7 +687,7 @@ header {
     width: 370px;
   }
 
-  .info {
+  .sp-info {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -722,7 +695,7 @@ header {
     gap: 36px;
   }
 
-  .info-card {
+  .sp-info-card {
     position: relative;
     display: flex;
     padding: 0 30px;
@@ -740,7 +713,7 @@ header {
     color: var(--text)
   }
 
-  .info-container {
+  .sp-info-container {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -748,24 +721,24 @@ header {
     padding: 0 18px;
   }
 
-  .info-icon {
+  .sp-info-icon {
     width: 32px;
     height: 32px;
     display: none;
   }
 
-  .info-card:hover {
+  .sp-info-card:hover {
     color: var(--primary)
   }
 
-  .info-card:hover .info-icon {
+  .sp-info-card:hover .sp-info-icon {
     display: block;
   }
 
   /* Main container for the info overlay */
-  .info-overlay {
+  .sp-info-overlay {
     position: absolute;
-    /* Positioned relative to .info-card */
+    /* Positioned relative to .sp-info-card */
     top: 100%;
     /* Places the overlay right below the card */
     left: 50%;
@@ -783,7 +756,7 @@ header {
   }
 
   /* Overlay container */
-  .overlay {
+  .sp-overlay {
     position: relative;
     width: 100%;
     height: 100%;
@@ -796,7 +769,7 @@ header {
   }
 
   /* Icon inside the overlay */
-  .info-overlay-icon {
+  .sp-info-overlay-icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -806,7 +779,7 @@ header {
   }
 
   /* Text inside the overlay */
-  .info-overlay-text {
+  .sp-info-overlay-text {
     position: absolute;
     margin: 0;
     font-size: 13px;
@@ -818,7 +791,7 @@ header {
     border-radius: 4px;
   }
 
-  .info-card:hover .info-overlay {
+  .sp-info-card:hover .sp-info-overlay {
     display: block;
   }
 
