@@ -13,9 +13,9 @@
 <body>
   <header>
     <nav>
-      
-        <img class="sp-logo" src="./assets/logo.png" alt="logo" />
-      
+
+      <img class="sp-logo" src="./assets/logo.png" alt="logo" />
+
       <div class="sp-nav-container">
         <div class="sp-links">
           <ul>
@@ -44,9 +44,11 @@
       <h1><span>GET AN <br></span>INTERVENTION</h1>
       <p>
         Showing greater respect to older adults can<br class="sp-m-br"> be done<br class="sp-t-br"> in several ways
-        :<br class="sp-d-br"> acknowledging and<br class="sp-m-br"> putting to use the talents<br class="sp-t-br"> and skills of older<br class="sp-m-br">
+        :<br class="sp-d-br"> acknowledging and<br class="sp-m-br"> putting to use the talents<br class="sp-t-br"> and
+        skills of older<br class="sp-m-br">
         adults; creating intergenerational initiatives;<br class="sp-m-br"><br class="sp-t-br"> and allowing older
-        adults to stay active and<br class="sp-m-br"> independent<br class="sp-t-br"><br class="sp-d-br"> for as long as possible.
+        adults to stay active and<br class="sp-m-br"> independent<br class="sp-t-br"><br class="sp-d-br"> for as long as
+        possible.
       </p>
     </div>
 
@@ -181,9 +183,12 @@
               <img class="sp-quotes" src="./assets/quotes.svg" alt="quotes" />
               <h3>Abbie Harvey</h3>
               <p>
-                I have been caring for my mom &<br class="sp-m-br"> dad off and on for about<br class="sp-t-br"> 10 years<br class="sp-m-br"> now,
-                and I know the importance of<br class="sp-m-br"> me being there<br class="sp-t-br"> for appointments.<br class="sp-m-br">
-                Older people need attention, love<br class="sp-m-br"> and<br class="sp-t-br"> care that they truly deserve.
+                I have been caring for my mom &<br class="sp-m-br"> dad off and on for about<br class="sp-t-br"> 10
+                years<br class="sp-m-br"> now,
+                and I know the importance of<br class="sp-m-br"> me being there<br class="sp-t-br"> for appointments.<br
+                  class="sp-m-br">
+                Older people need attention, love<br class="sp-m-br"> and<br class="sp-t-br"> care that they truly
+                deserve.
               </p>
             </div>
           </div>
@@ -345,6 +350,60 @@
   </section>
 
 
+
+  <section class="video-section">
+    <div class="content">
+      <h2><span class="whiten">WATCH </span> THE VIDEO</span></h2>
+      <ul>
+        <li>
+          <span class="checkmark">✔</span>
+          <strong>Needs Assessment</strong>
+        </li>
+        <li>
+          <p>The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the Consumer
+            Voices for Coverage program.</p>
+        </li>
+        <li>
+          <span class="checkmark">✔</span>
+          <strong>Insurance Advocacy</strong>
+        </li>
+        <li>
+          <p>These instruments are designed to collect data on the activities of the Consumer Voices for Coverage
+            program.</p>
+        </li>
+        <li>
+          <span class="checkmark">✔</span>
+          <strong>Treatment Planning & Placement</strong>
+        </li>
+        <li>
+          <p>They are also designed to collect data on the outcomes of the program, including the impact of the program
+            on the advocacy skills of the participants.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="video">
+      <div class="play-button" onclick="openVideo()">
+        <div class="ring"></div>
+        <div class="button">
+          <img src="assets/Polygon.svg" alt="Play Icon" class="play-icon" />
+        </div>
+      </div>
+
+      <img src="assets/grass.png" alt="People sitting on the grass" class="video-image">
+    </div>
+
+    <img src="./assets/logo.png" alt="logo" class="video-logo" />
+  </section>
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal" onclick="closeModalOnBackground(event)">
+    <div class="modal-content">
+      <span class="close" onclick="closeVideo()">&times;</span>
+      <iframe id="youtubeVideo" width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+
   <script>
     document.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault(); // Prevent form submission for demonstration purposes
@@ -359,6 +418,33 @@
         }
       });
     });
+
+    function openVideo() {
+      const videoModal = document.getElementById('videoModal');
+      const youtubeVideo = document.getElementById('youtubeVideo');
+
+      // Set the YouTube video URL (replace VIDEO_ID with your YouTube video ID)
+      youtubeVideo.src = "https://www.youtube.com/embed/VIDEO_ID?autoplay=1";
+
+      // Show the modal
+      videoModal.style.display = "flex";
+    }
+
+    function closeVideo() {
+      const videoModal = document.getElementById('videoModal');
+      const youtubeVideo = document.getElementById('youtubeVideo');
+
+      // Stop the video and hide the modal
+      youtubeVideo.src = "";
+      videoModal.style.display = "none";
+    }
+    function closeModalOnBackground(event) {
+      const modalContent = document.querySelector('.modal-content');
+      if (!modalContent.contains(event.target)) {
+        closeVideo();
+      }
+    }
+
   </script>
 </body>
 
