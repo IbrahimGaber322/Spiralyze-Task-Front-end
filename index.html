@@ -37,47 +37,108 @@
       </div>
     </nav>
   </header>
+
   <section id="hero" class="hero">
 
     <div class="hero-body__text">
-      <h1><span>GET AN </span>INTERVENTION</h1>
+      <h1><span>GET AN <br></span>INTERVENTION</h1>
       <p>
         Showing greater respect to older adults can be done in several ways
-        : acknowledging and putting to use the talents and skills of older
+        :<br> acknowledging and putting to use the talents and skills of older
         adults; creating intergenerational initiatives; and allowing older
-        adults to stay active and independent for as long as possible.
+        adults to stay active and independent<br> for as long as possible.
       </p>
     </div>
+
     <div class="hero-body__form">
       <form>
         <h2>Contact Us</h2>
+
         <div class="input-row">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+          <div class="field-group">
+            <div class="input-container">
+              <input id="first-name" name="firstName" type="text" class="input-field" placeholder=" " />
+              <label for="first-name" class="input-label">
+                First Name
+              </label>
+            </div>
+            <div class="error">
+              <div class="error-icon">
+                <img src="./assets/error.svg" alt="Error Icon" />
+                <p class="error-message">This field can’t be empty.<br> Please fill it in.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <div class="input-container">
+              <input id="last-name" name="lastName" type="text" class="input-field" placeholder=" " />
+              <label for="last-name" class="input-label">
+                Last Name
+              </label>
+            </div>
+            <div class="error">
+              <div class="error-icon">
+                <img src="./assets/error.svg" alt="Error Icon" />
+                <p class="error-message">This field can’t be empty.<br> Please fill it in.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="input-row">
-          <input type="email" placeholder="Business Email" />
-          <input type="text" placeholder="Company" />
+          <div class="field-group">
+            <div class="input-container">
+              <input id="email" name="email" type="email" class="input-field" placeholder=" " />
+              <label for="email" class="input-label">
+                Email
+              </label>
+            </div>
+            <div class="error">
+              <div class="error-icon">
+                <img src="./assets/error.svg" alt="Error Icon" />
+                <p class="error-message">This field can’t be empty.<br> Please fill it in.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group error-active">
+            <div class="input-container">
+              <input id="company" name="company" type="text" class="input-field" placeholder=" " />
+              <label for="company" class="input-label">
+                Company
+              </label>
+            </div>
+            <div class="error">
+              <div class="error-icon">
+                <img src="./assets/error.svg" alt="Error Icon" />
+                <p class="error-message">This field can’t be empty.<br> Please fill it in.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
         <select name="Country" class="dropdown">
           <option value="" disabled selected hidden>Country</option>
           <option value="United States">United States</option>
           <option value="Canada">Canada</option>
           <option value="Australia">Australia</option>
         </select>
+
         <button class="cta-button">
           <img src="./assets/mdi_send.svg" alt="send icon" />
           Submit
         </button>
       </form>
     </div>
-    </div>
+
     <div class="cutoffs">
       <img src="./assets/gray-curve.svg" alt="curve" class="curve-1" />
       <img src="./assets/white-curve.svg" alt="curve" class="curve-2" />
     </div>
   </section>
-  <section id="about">
+
+  <section id="about" class="about">
     <div class="about__img-container">
       <img src="./assets/about-1.png" alt="elders" />
       <img src="./assets/about-2.png" alt="elders" />
@@ -119,7 +180,195 @@
       </div>
 
   </section>
-  <section id="testimonials"></section>
+  <section id="testimonials" class="testimonial-section">
+    <div class="testimonial-carousel">
+      <div class="carousel">
+        <img src="./assets/arrow-left.svg" class="carousel-btn next" />
+        <div class="carousel-content">
+          <div class="testimonial active">
+            <img src="./assets/Emily.png" alt="Emily" class="testimonial-img" />
+            <div class="testimonial-text">
+              <img class="quotes" src="./assets/quotes.svg" alt="quotes" />
+              <h3>Abbie Harvey</h3>
+              <p>
+                I have been caring for my mom & dad off and on for about 10 years now,
+                and I know the importance of me being there for appointments.
+                Older people need attention, love and care that they truly deserve.
+              </p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="https://via.placeholder.com/150" alt="Person 2" class="testimonial-img" />
+            <div class="testimonial-text">
+              <img class="quotes" src="./assets/quotes.svg" alt="quotes" />
+              <h3>John Smith</h3>
+              <p>
+                Taking care of others is not just a job for me; it's my calling.
+                I strive to bring comfort and a smile to those who need it the most.
+              </p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <img src="https://via.placeholder.com/150" alt="Person 3" class="testimonial-img" />
+            <div class="testimonial-text">
+              <img class="quotes" src="./assets/quotes.svg" alt="quotes" />
+              <h3>Emily Johnson</h3>
+              <p>
+                Compassion is the key to making a difference. I feel fulfilled
+                knowing I can be a part of someone's journey in a meaningful way.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/arrow-right.svg" class="carousel-btn next" />
+      </div>
+
+
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="info" class="info-section">
+    <div class="wrapper">
+      <h2 class="title"><span class="hollow">WE </span>CAN ORGANIZE EVERYTHING</h2>
+      <div class="paragraph-container">
+        <p class="summary">
+          <span class="weight-800">Interventions</span> should focus on older<br>adult’s desire for
+          connectedness,<br>participation and independence.
+        </p>
+        <p class="paragraph">
+          Loneliness and social isolation are growing public<br>health concerns in our aging society. Whilst these<br>
+          experiences occur across the life span, 50% of<br> individuals aged over 60 are at risk of social
+          isolation<br>and
+          one-third will experience some degree of<br>loneliness later in life. It is vital to reduce loneliness<br> and
+          social
+          isolation among older adults.
+        </p>
+        <p class="paragraph">
+          The methodology framework proposed by Asked<br>and O’Malley and further developed by Levac, et al.<br>was used
+          to
+          guide the scoping review process. A<br>total of 33 reviews met the inclusion criteria,<br>evaluating a range
+          of
+          interventions targeted at older<br>people residing in the community or<br>institutionalised settings.
+        </p>
+      </div>
+      <div class="info">
+        <div class="info-card">
+
+          <div class="info-container">
+            <p>
+              Needs Assessment
+            </p>
+            <img class="info-icon" src="./assets/info-icon.svg" alt="info icon" />
+          </div>
+          <div class="info-overlay">
+            <div class="overlay">
+              <img class="info-overlay-icon" src="./assets/info-overlay-icon.svg" alt="info icon" />
+
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+
+          <div class="info-container">
+            <p>
+              Treatment Planning & Placement
+            </p>
+            <img class="info-icon" src="./assets/info-icon.svg" alt="info icon" />
+          </div>
+          <div class="info-overlay">
+            <div class="overlay">
+              <img class="info-overlay-icon" src="./assets/info-overlay-icon.svg" alt="info icon" />
+
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+
+          <div class="info-container">
+            <p>
+              Transportation & Logistics
+            </p>
+            <img class="info-icon" src="./assets/info-icon.svg" alt="info icon" />
+          </div>
+          <div class="info-overlay">
+            <div class="overlay">
+              <img class="info-overlay-icon" src="./assets/info-overlay-icon.svg" alt="info icon" />
+
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+
+          <div class="info-container">
+            <p>
+              Insurance Advocacy
+            </p>
+            <img class="info-icon" src="./assets/info-icon.svg" alt="info icon" />
+          </div>
+          <div class="info-overlay">
+            <div class="overlay">
+              <img class="info-overlay-icon" src="./assets/info-overlay-icon.svg" alt="info icon" />
+
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+
+          <div class="info-container">
+            <p>
+              Employment Advocacy
+            </p>
+            <img class="info-icon" src="./assets/info-icon.svg" alt="info icon" />
+          </div>
+          <div class="info-overlay">
+            <div class="overlay">
+              <img class="info-overlay-icon" src="./assets/info-overlay-icon.svg" alt="info icon" />
+
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+
+          <div class="info-container">
+            <p>
+              Aftercare Planning
+            </p>
+            <img class="info-icon" src="./assets/info-icon.svg" alt="info icon" />
+          </div>
+          <div class="info-overlay">
+            <div class="overlay">
+              <img class="info-overlay-icon" src="./assets/info-overlay-icon.svg" alt="info icon" />
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form submission for demonstration purposes
+      const fields = document.querySelectorAll('.input-field');
+
+      fields.forEach(field => {
+        const fieldGroup = field.closest('.field-group');
+        if (!field.value.trim()) {
+          fieldGroup.classList.add('error-active');
+        } else {
+          fieldGroup.classList.remove('error-active');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
