@@ -1,0 +1,195 @@
+:root {
+    --primary: #5bc8af;
+    --secondary: #297c6b;
+    --background: #194d44;
+    --faded: #eaeaea;
+    --text: #333;
+    --gradient1: #2a7d6c;
+    --gradient2: #3e69609e;
+  }
+  
+  .sp-weight-800 {
+    font-weight: 800;
+  }
+.sp-about {
+    background-color: #f5f5f5;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 80px 128px 0px 128px;
+    margin-top: -1px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        padding: 80px 23px 0px 23px;
+
+    }
+
+    @media screen and (max-width: 360px) {
+        padding: 80px 12px 0px 12px;
+
+    }
+
+    .sp-about__img-container {
+        width: 100%;
+        display: flex;
+
+        margin-bottom: 64px;
+        justify-content: center;
+        gap: 36px;
+
+        @media screen and (max-width: 360px) {
+            display: none;
+
+        }
+
+        img {
+            width: 371px;
+            height: 180px;
+
+            @media screen and (max-width: 768px) {
+                width: 224px;
+                height: 128px;
+            }
+        }
+    }
+
+    .sp-about__text {
+        .sp-about__text-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 32px;
+
+            h2 {
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 46px;
+                text-transform: uppercase;
+                color: var(--text);
+
+                @media screen and (max-width: 360px) {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+            }
+
+            span {
+                -webkit-text-stroke: 1px var(--text);
+                color: transparent;
+            }
+
+            hr {
+                flex-grow: 1;
+                margin-left: 27px;
+                height: 1px;
+                background-color: #eaeaea;
+                border: none;
+            }
+        }
+
+        .sp-about__text-summary {
+            display: flex;
+            gap: 36px;
+
+            .sp-m-br {
+                display: none;
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            @media screen and (max-width: 360px) {
+                gap: 32px;
+                flex-direction: column;
+
+                .sp-m-br {
+                    display: block;
+                }
+            }
+
+            .sp-about__text-summary-1,
+            .sp-about__text-summary-2,
+            .sp-about__text-summary-btn {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                width: 370px;
+                color: var(--text);
+
+                @media screen and (max-width: 768px) {
+                    width: 348px;
+                }
+            }
+
+            .sp-about-btn-container {
+                display: flex;
+                flex-direction: column;
+                gap: 36px;
+
+                @media screen and (max-width: 768px) {
+                    gap: 24px;
+                    flex-direction: row;
+                }
+
+                @media screen and (max-width: 360px) {
+                    gap: 12px;
+                    flex-direction: column;
+
+                }
+            }
+
+
+            .sp-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                margin-top: 10px;
+                width: 370px;
+                height: 52px;
+                background-color: #f5f5f5;
+                color: var(--primary);
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 28px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                border: 2px solid var(--primary);
+                text-align: center;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                @media screen and (max-width: 768px) {
+                    width: 348px;
+                }
+
+                &:hover {
+                    box-shadow: 0px 8px 6px 0px #00000014;
+                }
+
+                &:active {
+                    box-shadow: 0px 4px 6px 0px #00000014;
+                }
+
+                img {
+                    /* Ensure images inside buttons align properly */
+                    width: auto;
+                    height: 20px;
+                }
+
+            }
+        }
+    }
+}

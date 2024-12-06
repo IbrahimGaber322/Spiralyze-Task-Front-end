@@ -1,0 +1,247 @@
+:root {
+    --primary: #5bc8af;
+    --secondary: #297c6b;
+    --background: #194d44;
+    --faded: #eaeaea;
+    --text: #333;
+    --gradient1: #2a7d6c;
+    --gradient2: #3e69609e;
+}
+
+.sp-weight-800 {
+    font-weight: 800;
+}
+
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #305D52 0%, #153F38 100%);
+    color: white;
+    position: relative;
+}
+
+.video-section .whiten {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+.video-section .content {
+    flex: 1;
+    max-width: 50%;
+    padding: 40px;
+}
+
+.video-section h2 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+
+
+.video-section ul {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.video-section ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.video-section ul li .checkmark {
+    color: #00e676;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.video-section ul li strong {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.video-section ul li p {
+    font-size: 18px;
+    color: #FFFFFFCC;
+    padding-left: 30px;
+}
+
+.video-section .video {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+}
+
+
+
+.video-section .video .video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    /* Remove scale transform here */
+}
+
+/* Outer ring for hover/pressed state */
+.play-button .ring {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    /* Faint white ring */
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease;
+    transform-origin: center;
+    /* Keeps the ring centered */
+}
+
+/* Inner button */
+.play-button .button {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #5BC8AF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Play icon */
+.play-icon {
+    width: 30px;
+    height: 30px;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.play-button:hover .ring {
+    width: 140px;
+    height: 140px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    /* Enhanced ring visibility */
+    background-color: #FFFFFFCC;
+    opacity: 0.5;
+}
+
+.video-image {
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-button .ring {
+        width: 80px;
+        height: 80px;
+    }
+
+    .play-button .button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    width: 600px;
+    text-align: center;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 315px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column;
+    }
+
+    .video-section .content,
+    .video-section .video {
+        max-width: 100%;
+    }
+}
+
+.video-logo {
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+
+
+    @media screen and (max-width: 768px) {
+        bottom: 12px;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+}

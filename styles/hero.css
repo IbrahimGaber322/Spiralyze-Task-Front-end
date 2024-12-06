@@ -1,0 +1,355 @@
+:root {
+    --primary: #5bc8af;
+    --secondary: #297c6b;
+    --background: #194d44;
+    --faded: #eaeaea;
+    --text: #333;
+    --gradient1: #2a7d6c;
+    --gradient2: #3e69609e;
+  }
+  
+  .sp-weight-800 {
+    font-weight: 800;
+  }
+.sp-hero {
+    background-image: url('../assets/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 109px;
+    position: relative;
+    padding: 127px 128px 74px 128px;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        padding: 156px 97px 185px 97px;
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+
+        background-position-x: -4000;
+    }
+
+    @media screen and (max-width: 360px) {
+        padding: 80px 12px 167px 12px;
+    }
+
+    .sp-cutoffs {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+
+        @media screen and (max-width: 768px) {
+            width: 170%;
+        }
+
+        @media screen and (max-width: 360px) {
+            width: 300%;
+
+        }
+    }
+
+    .sp-curve-1 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .sp-curve-2 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-left: -4px;
+    }
+
+    .sp-hero-body__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+
+        h1 {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 72px;
+            color: white;
+        }
+
+        .sp-t-br {
+            display: none;
+        }
+
+        .sp-m-br {
+            display: none;
+        }
+
+        span {
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+        }
+
+        p {
+            /* add responsive  */
+            width: 601px;
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+
+            p {
+                width: 100%;
+            }
+
+            .sp-t-br {
+                display: block;
+            }
+
+            .sp-d-br {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            h1 {
+                font-size: 36px;
+                line-height: 44px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 12px;
+            }
+
+            .sp-d-br {
+                display: none;
+            }
+
+            .sp-t-br {
+                display: none;
+            }
+
+            .sp-m-br {
+                display: block;
+            }
+
+        }
+    }
+
+    .sp-hero-body__form {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        form {
+
+            background: linear-gradient(180deg,
+                    #2a7d6c 0%,
+                    rgba(62, 105, 96, 0.62) 100%);
+            border-radius: 12px;
+            box-shadow: 0px 10px 50px 0px #0000001f;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            /* add responsive */
+            width: 472px;
+
+            @media screen and (max-width: 360px) {
+                width: 328px;
+
+            }
+
+
+            h2 {
+                font-size: 28px;
+                line-height: 34.13px;
+                font-weight: 700;
+                color: white;
+                text-align: center;
+                padding-top: 51px;
+                padding-bottom: 34px;
+            }
+
+            .sp-input-row {
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                padding: 0 28px;
+
+                @media screen and (max-width: 360px) {
+                    flex-direction: column;
+                    gap: 12px;
+
+                }
+
+                .sp-field-group {
+                    width: 100%;
+                    position: relative;
+
+                    .sp-input-container {
+                        position: relative;
+                        width: 100%;
+
+                        .sp-input-field {
+                            width: 100%;
+                            height: 48px;
+                            padding: 0 16px;
+                            color: white;
+                            font-size: 1.125rem;
+                            /* 18px */
+                            border: 1px solid #d1d5db;
+                            /* default border color */
+                            background-color: #29594e;
+                            border-radius: 2px;
+                            /* rounded-lg */
+                            outline: none;
+                            transition: all 0.2s ease-in-out;
+                        }
+
+                        .sp-input-field:focus {
+                            border-color: transparent;
+                            box-shadow: 0 0 0 1px white;
+                            background-color: transparent;
+                            /* focus:ring-2 focus:ring-blue-400 */
+                        }
+
+                        .sp-input-label {
+                            position: absolute;
+                            left: 0.625rem;
+                            /* 2.5px */
+                            top: 0.75rem;
+                            /* 3px */
+                            padding: 0 0.25rem;
+                            background-color: transparent;
+                            font-size: 1.125rem;
+                            /* same as sp-input-field's font-size */
+                            color: white;
+                            /* text-zinc-400 */
+                            cursor: text;
+                            transition: all 0.2s ease-in-out;
+                            max-width: calc(100% - 18px);
+                            /* truncate behavior */
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        .sp-input-field:focus+.sp-input-label,
+                        .sp-input-field:not(:placeholder-shown)+.sp-input-label {
+                            font-size: 0.75rem;
+                            /* 12px */
+                            top: -0.5rem;
+                            /* -2.5px */
+                            color: white;
+                            /* text-blue-400 */
+                            background-color: #2C7566;
+                        }
+                    }
+
+                    /* Error Styles */
+                    .sp-error {
+                        position: absolute;
+                        width: 100%;
+                        visibility: hidden;
+                        /* Hidden by default */
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        z-index: 100;
+
+                        .sp-error-icon {
+                            position: absolute;
+                            width: 100%;
+                            pointer-events: none;
+                        }
+                    }
+
+                    /* Show Error on Active Field Group */
+                    .sp-error-active .sp-error {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                }
+
+                .sp-field-group.sp-error-active .sp-error {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            .sp-dropdown {
+                margin: 0 28px;
+                padding: 14px 16px;
+                background: #ffffff0a;
+                border: 1px solid #ffffff80;
+                color: #ffffffb2;
+                background-color: #ffffff0a;
+                cursor: pointer;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z' fill='white'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 16px center;
+                background-size: 24px;
+            }
+
+            select:focus {
+                outline: none;
+                border-color: white;
+            }
+
+            select option {
+                background-color: rgba(62, 105, 96, 1);
+                padding: 5px;
+                border: 1px solid #ffffff80;
+            }
+
+            .sp-cta-button {
+                align-self: center;
+                display: flex;
+                justify-content: center;
+                background: var(--primary);
+                border: none;
+                gap: 8px;
+                border-radius: 4px;
+                color: white;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 24px;
+                padding: 16px 60px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 41px;
+                margin-bottom: 56px;
+
+                &:hover {
+                    background-color: #4caf94;
+                    box-shadow: 0px 8px 6px 0px #00000014;
+                }
+
+                &:active {
+                    box-shadow: 0px 4px 6px 0px #00000014;
+                    background-color: #35bb9c;
+                }
+
+                img {
+                    /* Ensure images inside buttons align properly */
+                    width: auto;
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+}
