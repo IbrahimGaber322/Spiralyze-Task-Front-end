@@ -12,7 +12,7 @@
     font-weight: 800;
 }
 
-.video-section {
+.sp-video-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,62 +21,58 @@
     position: relative;
 }
 
-.video-section .whiten {
+.sp-video-section__hollow {
     -webkit-text-stroke: 1px white;
     color: transparent;
 }
 
-.video-section .content {
+.sp-video-section__content {
     flex: 1;
     max-width: 50%;
     padding: 40px;
 }
 
-.video-section h2 {
+.sp-video-section__title {
     font-size: 44px;
     font-weight: 700;
 }
 
-
-
-.video-section ul {
+.sp-video-section__list {
     list-style: none;
     padding-top: 20px;
 }
 
-.video-section ul li {
+.sp-video-section__list-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
 }
 
-.video-section ul li .checkmark {
+.sp-video-section__checkmark {
     color: #00e676;
     margin-right: 10px;
     font-size: 24px;
 }
 
-.video-section ul li strong {
+.sp-video-section__list-item-title {
     font-size: 24px;
     margin-bottom: 5px;
     display: block;
 }
 
-.video-section ul li p {
+.sp-video-section__list-item-text {
     font-size: 18px;
     color: #FFFFFFCC;
     padding-left: 30px;
 }
 
-.video-section .video {
+.sp-video-section__video {
     flex: 1;
     max-width: 50%;
     position: relative;
 }
 
-
-
-.video-section .video .video-overlay {
+.sp-video-section__video-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -84,7 +80,7 @@
     text-align: center;
 }
 
-.play-button {
+.sp-play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -95,25 +91,20 @@
     width: 80px;
     height: 80px;
     cursor: pointer;
-    /* Remove scale transform here */
 }
 
-/* Outer ring for hover/pressed state */
-.play-button .ring {
+.sp-play-button__ring {
     position: absolute;
     width: 120px;
     height: 120px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    /* Faint white ring */
     border-radius: 50%;
     opacity: 1;
     transition: all 0.3s ease;
     transform-origin: center;
-    /* Keeps the ring centered */
 }
 
-/* Inner button */
-.play-button .button {
+.sp-play-button__button {
     position: relative;
     width: 80px;
     height: 80px;
@@ -125,55 +116,49 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Play icon */
-.play-icon {
+.sp-play-button__icon {
     width: 30px;
     height: 30px;
     color: #FFFFFF;
     transition: transform 0.3s ease;
 }
 
-/* Hover effect */
-.play-button:hover .ring {
+.sp-play-button:hover .sp-play-button__ring {
     width: 140px;
     height: 140px;
     border: 2px solid rgba(255, 255, 255, 0.8);
-    /* Enhanced ring visibility */
     background-color: #FFFFFFCC;
     opacity: 0.5;
 }
 
-.video-image {
+.sp-video-section__video-image {
     width: 100%;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .play-button {
+    .sp-play-button {
         width: 60px;
         height: 60px;
     }
 
-    .play-button .ring {
+    .sp-play-button__ring {
         width: 80px;
         height: 80px;
     }
 
-    .play-button .button {
+    .sp-play-button__button {
         width: 60px;
         height: 60px;
     }
 
-    .play-icon {
+    .sp-play-button__icon {
         width: 20px;
         height: 20px;
     }
 }
 
-/* Modal styling */
-.modal {
+.sp-video-section__modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -185,7 +170,7 @@
     align-items: center;
 }
 
-.modal-content {
+.sp-video-section__modal-content {
     position: relative;
     background-color: #fff;
     padding: 20px;
@@ -196,12 +181,12 @@
     text-align: center;
 }
 
-.modal-content iframe {
+.sp-video-section__modal-content iframe {
     width: 100%;
     height: 315px;
 }
 
-.close {
+.sp-video-section__close {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -212,30 +197,29 @@
     transition: color 0.3s ease;
 }
 
-.close:hover {
+.sp-video-section__close:hover {
     color: #000;
 }
 
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    .video-section {
+    .sp-video-section {
         flex-direction: column;
     }
 
-    .video-section .content,
-    .video-section .video {
+    .sp-video-section__content,
+    .sp-video-section__video {
         max-width: 100%;
     }
 }
 
-.video-logo {
+.sp-video-section__logo {
     position: absolute;
     bottom: 36px;
     right: 36px;
+}
 
-
-    @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .sp-video-section__logo {
         bottom: 12px;
         right: 0;
         left: 0;
@@ -243,5 +227,4 @@
         margin-right: auto;
         text-align: center;
     }
-
 }

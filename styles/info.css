@@ -6,11 +6,12 @@
     --text: #333;
     --gradient1: #2a7d6c;
     --gradient2: #3e69609e;
-  }
-  
-  .sp-weight-800 {
+}
+
+.sp-weight-800 {
     font-weight: 800;
-  }
+}
+
 .sp-info-section {
     width: 100%;
     display: flex;
@@ -19,215 +20,207 @@
     align-items: center;
     padding: 0 127px 100px 128px;
     background-color: #f5f5f5;
+}
 
-    @media screen and (max-width: 768px) {
+.sp-m-br{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sp-info-section {
         padding: 0 23px 100px 23px;
-
-        .sp-d-br {
-            display: none;
-        }
     }
+}
 
-    .sp-wrapper {
-        max-width: 1185px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.sp-info-section__wrapper {
+    max-width: 1185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp-info-section__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: var(--text);
+    text-align: start;
+    width: 100%;
+}
+
+@media screen and (max-width: 360px) {
+    .sp-info-section__title {
+        font-size: 24px;
+        line-height: 36px;
     }
-
-    .sp-title {
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 46px;
-        text-transform: uppercase;
-        color: var(--text);
-        text-align: start;
-        width: 100%;
-
-        @media screen and (max-width: 360px) {
-            font-size: 24px;
-            line-height: 36px;
-            font-weight: 700;
-
-        }
+    .sp-m-br{
+        display: block;
     }
+}
 
-    .sp-hollow {
-        -webkit-text-stroke: 1px var(--text);
-        color: transparent;
-    }
+.sp-info-section__hollow {
+    -webkit-text-stroke: 1px var(--text);
+    color: transparent;
+}
 
-    .sp-paragraph-container {
-        display: flex;
-        gap: 36px;
-        margin-top: 32px;
-        margin-bottom: 36px;
-        justify-content: start;
-        width: 100%;
-        color: var(--text);
+.sp-info-section__paragraph-container {
+    display: flex;
+    gap: 36px;
+    margin-top: 32px;
+    margin-bottom: 36px;
+    justify-content: start;
+    width: 100%;
+    color: var(--text);
+}
 
-        @media screen and (max-width: 768px) {
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-
-        @media screen and (max-width: 360px) {
-            gap: 60px;
-            flex-direction: column;
-            margin-bottom: 84px;
-
-            font-size: 14px;
-            line-height: 32px;
-        }
-    }
-
-    .sp-summary {
-        font-size: 18px;
-        line-height: 28px;
-        font-style: italic;
-        font-weight: 400;
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-        }
-    }
-
-    .sp-paragraph {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
-        width: 370px;
-
-        @media screen and (max-width: 768px) {
-            width: 348px;
-
-        }
-
-        @media screen and (max-width: 360px) {
-            width: 328px;
-
-        }
-    }
-
-    .sp-info {
-        width: 100%;
-        display: flex;
+@media screen and (max-width: 768px) {
+    .sp-info-section__paragraph-container {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 36px;
-
-        @media screen and (max-width: 768px) {
-            gap: 24px;
-
-        }
+        gap: 24px;
     }
-
-    .sp-info-card {
-        position: relative;
-        display: flex;
-        padding: 0 30px;
-        justify-content: center;
-        align-items: center;
-        width: 371px;
-        height: 96px;
-        border: 2px solid var(--primary);
-        border-radius: 2px;
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 28px;
-        text-align: center;
-        color: var(--text);
-
-        @media screen and (max-width: 768px) {
-            width: 348px;
-
-        }
-    }
-
-    .sp-info-container {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-        padding: 0 18px;
-    }
-
-    .sp-info-icon {
-        width: 32px;
-        height: 32px;
+    .sp-d-br{
         display: none;
     }
+}
 
-    .sp-info-card:hover {
-        color: var(--primary)
+@media screen and (max-width: 360px) {
+    .sp-info-section__paragraph-container {
+        gap: 60px;
+        flex-direction: column;
+        margin-bottom: 84px;
+        font-size: 14px;
+        line-height: 32px;
     }
+}
 
-    .sp-info-card:hover .sp-info-icon {
-        display: block;
-    }
-
-    /* Main container for the info overlay */
-    .sp-info-overlay {
-        position: absolute;
-        /* Positioned relative to .sp-info-card */
-        top: 100%;
-        /* Places the overlay right below the card */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 300px;
-        height: 110px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: none;
-        /* Ensures clicks pass through */
-        z-index: 10;
-        /* Brings overlay above other elements */
-        display: none;
-    }
-
-    /* Overlay container */
-    .sp-overlay {
-        position: relative;
+.sp-info-section__summary {
+    font-size: 18px;
+    line-height: 28px;
+    font-style: italic;
+    font-weight: 400;
+    @media screen and (max-width: 768px) {
         width: 100%;
-        height: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        box-sizing: border-box;
+        
     }
+}
 
-    /* Icon inside the overlay */
-    .sp-info-overlay-icon {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
+.sp-info-section__paragraph {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 370px;
+}
 
-        object-fit: contain;
+@media screen and (max-width: 768px) {
+    .sp-info-section__paragraph {
+        width: 348px;
     }
+}
 
-    /* Text inside the overlay */
-    .sp-info-overlay-text {
-        position: absolute;
-        margin: 0;
-        font-size: 13px;
-        line-height: 20px;
-        color: white;
-        text-align: center;
-        padding: 8px 12px;
-        background-color: transparent;
-        border-radius: 4px;
+@media screen and (max-width: 360px) {
+    .sp-info-section__paragraph {
+        width: 328px;
     }
+}
 
-    .sp-info-card:hover .sp-info-overlay {
-        display: block;
+.sp-info-section__cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 36px;
+}
+
+@media screen and (max-width: 768px) {
+    .sp-info-section__cards {
+        gap: 24px;
     }
+}
+
+.sp-info-section__card {
+    position: relative;
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+    align-items: center;
+    width: 371px;
+    height: 96px;
+    border: 2px solid var(--primary);
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--text);
+}
+
+@media screen and (max-width: 768px) {
+    .sp-info-section__card {
+        width: 348px;
+    }
+}
+
+.sp-info-section__card-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+}
+
+.sp-info-section__icon {
+    width: 32px;
+    height: 32px;
+    display: none;
+}
+
+.sp-info-section__card:hover {
+    color: var(--primary);
+}
+
+.sp-info-section__card:hover .sp-info-section__icon {
+    display: block;
+}
+
+.sp-info-section__overlay {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+    display: none;
+}
+
+.sp-info-section__overlay-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.sp-info-section__overlay-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: contain;
+}
+
+.sp-info-section__card:hover .sp-info-section__overlay {
+    display: block;
 }

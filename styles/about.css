@@ -6,18 +6,18 @@
     --text: #333;
     --gradient1: #2a7d6c;
     --gradient2: #3e69609e;
-  }
-  
-  .sp-weight-800 {
+}
+
+.sp-text--weight-800 {
     font-weight: 800;
-  }
+}
+
 .sp-about {
     background-color: #f5f5f5;
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
-
     padding: 80px 128px 0px 128px;
     margin-top: -1px;
     align-items: center;
@@ -25,25 +25,21 @@
 
     @media screen and (max-width: 768px) {
         padding: 80px 23px 0px 23px;
-
     }
 
     @media screen and (max-width: 360px) {
         padding: 80px 12px 0px 12px;
-
     }
 
     .sp-about__img-container {
         width: 100%;
         display: flex;
-
         margin-bottom: 64px;
         justify-content: center;
         gap: 36px;
 
         @media screen and (max-width: 360px) {
             display: none;
-
         }
 
         img {
@@ -131,7 +127,7 @@
                 }
             }
 
-            .sp-about-btn-container {
+            .sp-about__btn-container {
                 display: flex;
                 flex-direction: column;
                 gap: 36px;
@@ -144,12 +140,10 @@
                 @media screen and (max-width: 360px) {
                     gap: 12px;
                     flex-direction: column;
-
                 }
             }
 
-
-            .sp-btn {
+            .sp-about__btn {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -162,11 +156,8 @@
                 font-size: 18px;
                 font-weight: 700;
                 line-height: 28px;
-                text-align: left;
-                text-underline-position: from-font;
-                text-decoration-skip-ink: none;
-                border: 2px solid var(--primary);
                 text-align: center;
+                border: 2px solid var(--primary);
                 border-radius: 4px;
                 cursor: pointer;
                 transition: all 0.3s ease;
@@ -184,11 +175,9 @@
                 }
 
                 img {
-                    /* Ensure images inside buttons align properly */
                     width: auto;
                     height: 20px;
                 }
-
             }
         }
     }

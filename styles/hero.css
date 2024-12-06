@@ -6,11 +6,12 @@
     --text: #333;
     --gradient1: #2a7d6c;
     --gradient2: #3e69609e;
-  }
-  
-  .sp-weight-800 {
+}
+
+.sp-text--weight-800 {
     font-weight: 800;
-  }
+}
+
 .sp-hero {
     background-image: url('../assets/hero-background.png');
     background-size: cover;
@@ -30,7 +31,6 @@
         gap: 0;
         flex-direction: column;
         align-items: center;
-
         background-position-x: -4000;
     }
 
@@ -38,7 +38,7 @@
         padding: 80px 12px 167px 12px;
     }
 
-    .sp-cutoffs {
+    .sp-hero__cutoffs {
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -50,24 +50,23 @@
 
         @media screen and (max-width: 360px) {
             width: 300%;
-
         }
     }
 
-    .sp-curve-1 {
+    .sp-hero__curve-1 {
         position: absolute;
         bottom: 0;
         width: 100%;
     }
 
-    .sp-curve-2 {
+    .sp-hero__curve-2 {
         position: absolute;
         bottom: 0;
         width: 100%;
         margin-left: -4px;
     }
 
-    .sp-hero-body__text {
+    .sp-hero__body-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -80,11 +79,11 @@
             color: white;
         }
 
-        .sp-t-br {
+        .sp-hero__text-break-tablet {
             display: none;
         }
 
-        .sp-m-br {
+        .sp-hero__text-break-mobile {
             display: none;
         }
 
@@ -94,7 +93,6 @@
         }
 
         p {
-            /* add responsive  */
             width: 601px;
             color: white;
             font-size: 14px;
@@ -109,11 +107,11 @@
                 width: 100%;
             }
 
-            .sp-t-br {
+            .sp-hero__text-break-tablet {
                 display: block;
             }
 
-            .sp-d-br {
+            .sp-hero__text-break-desktop {
                 display: none;
             }
         }
@@ -130,45 +128,37 @@
                 margin-bottom: 12px;
             }
 
-            .sp-d-br {
+            .sp-hero__text-break-desktop {
                 display: none;
             }
 
-            .sp-t-br {
+            .sp-hero__text-break-tablet {
                 display: none;
             }
 
-            .sp-m-br {
+            .sp-hero__text-break-mobile {
                 display: block;
             }
-
         }
     }
 
-    .sp-hero-body__form {
-
+    .sp-hero__body-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
         form {
-
-            background: linear-gradient(180deg,
-                    #2a7d6c 0%,
-                    rgba(62, 105, 96, 0.62) 100%);
+            background: linear-gradient(180deg, #2a7d6c 0%, rgba(62, 105, 96, 0.62) 100%);
             border-radius: 12px;
             box-shadow: 0px 10px 50px 0px #0000001f;
             display: flex;
             flex-direction: column;
             gap: 16px;
-            /* add responsive */
             width: 472px;
 
             @media screen and (max-width: 360px) {
                 width: 328px;
-
             }
-
 
             h2 {
                 font-size: 28px;
@@ -180,7 +170,7 @@
                 padding-bottom: 34px;
             }
 
-            .sp-input-row {
+            .sp-hero__input-row {
                 display: flex;
                 flex-direction: row;
                 gap: 16px;
@@ -189,105 +179,83 @@
                 @media screen and (max-width: 360px) {
                     flex-direction: column;
                     gap: 12px;
-
                 }
 
-                .sp-field-group {
+                .sp-hero__field-group {
                     width: 100%;
                     position: relative;
 
-                    .sp-input-container {
+                    .sp-hero__input-container {
                         position: relative;
                         width: 100%;
 
-                        .sp-input-field {
+                        .sp-hero__input-field {
                             width: 100%;
                             height: 48px;
                             padding: 0 16px;
                             color: white;
                             font-size: 1.125rem;
-                            /* 18px */
                             border: 1px solid #d1d5db;
-                            /* default border color */
                             background-color: #29594e;
                             border-radius: 2px;
-                            /* rounded-lg */
                             outline: none;
                             transition: all 0.2s ease-in-out;
                         }
 
-                        .sp-input-field:focus {
+                        .sp-hero__input-field:focus {
                             border-color: transparent;
                             box-shadow: 0 0 0 1px white;
                             background-color: transparent;
-                            /* focus:ring-2 focus:ring-blue-400 */
                         }
 
-                        .sp-input-label {
+                        .sp-hero__input-label {
                             position: absolute;
                             left: 0.625rem;
-                            /* 2.5px */
                             top: 0.75rem;
-                            /* 3px */
                             padding: 0 0.25rem;
                             background-color: transparent;
                             font-size: 1.125rem;
-                            /* same as sp-input-field's font-size */
                             color: white;
-                            /* text-zinc-400 */
                             cursor: text;
                             transition: all 0.2s ease-in-out;
                             max-width: calc(100% - 18px);
-                            /* truncate behavior */
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
                         }
 
-                        .sp-input-field:focus+.sp-input-label,
-                        .sp-input-field:not(:placeholder-shown)+.sp-input-label {
+                        .sp-hero__input-field:focus+.sp-hero__input-label,
+                        .sp-hero__input-field:not(:placeholder-shown)+.sp-hero__input-label {
                             font-size: 0.75rem;
-                            /* 12px */
                             top: -0.5rem;
-                            /* -2.5px */
                             color: white;
-                            /* text-blue-400 */
                             background-color: #2C7566;
                         }
                     }
 
-                    /* Error Styles */
-                    .sp-error {
+                    .sp-hero__error {
                         position: absolute;
                         width: 100%;
                         visibility: hidden;
-                        /* Hidden by default */
                         opacity: 0;
                         transition: opacity 0.3s ease;
                         z-index: 100;
 
-                        .sp-error-icon {
+                        .sp-hero__error-icon {
                             position: absolute;
                             width: 100%;
                             pointer-events: none;
                         }
                     }
 
-                    /* Show Error on Active Field Group */
-                    .sp-error-active .sp-error {
+                    .sp-hero__field-group.sp-error-active .sp-hero__error {
                         visibility: visible;
                         opacity: 1;
                     }
-
-                }
-
-                .sp-field-group.sp-error-active .sp-error {
-                    visibility: visible;
-                    opacity: 1;
                 }
             }
 
-            .sp-dropdown {
+            .sp-hero__dropdown {
                 margin: 0 28px;
                 padding: 14px 16px;
                 background: #ffffff0a;
@@ -315,7 +283,7 @@
                 border: 1px solid #ffffff80;
             }
 
-            .sp-cta-button {
+            .sp-hero__cta-button {
                 align-self: center;
                 display: flex;
                 justify-content: center;
@@ -344,12 +312,10 @@
                 }
 
                 img {
-                    /* Ensure images inside buttons align properly */
                     width: auto;
                     height: 20px;
                 }
             }
         }
     }
-
 }
