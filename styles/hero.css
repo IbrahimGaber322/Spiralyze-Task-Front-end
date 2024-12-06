@@ -248,9 +248,9 @@
                         }
                     }
 
-                    .sp-hero__field-group.sp-error-active .sp-hero__error {
-                        visibility: visible;
-                        opacity: 1;
+                    .sp-error-active {
+                        visibility: visible !important;
+                        opacity: 1 !important;
                     }
                 }
             }

@@ -5,11 +5,11 @@
     </g>
     <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="13" line-height="20"
         font-family="inherit">
-        This field can’t be empty.
+        Invalid Email.
     </text>
     <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="13" line-height="20"
         font-family="inherit">
-        Please fill it in.
+        Please add a valid email.
     </text>
     <defs>
         <filter id="filter0_d_4_223" x="0" y="0" width="216" height="89" filterUnits="userSpaceOnUse"
