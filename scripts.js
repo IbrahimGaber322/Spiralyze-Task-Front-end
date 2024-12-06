@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     videoModal.addEventListener('click', closeModalOnBackground);
 });
 
+
 /**
  * Handles the form submission by validating each input field.
  * @param {Event} event - The form submission event.
@@ -21,60 +22,36 @@ const handleFormSubmit = (event) => {
     event.preventDefault(); // Stop default submission
 
     const form = event.target;
-    const inputs = form.querySelectorAll('input');
-    const firstNameField = form.querySelector('input[name="firstName"]');
-    const lastNameField = form.querySelector('input[name="lastName"]');
-    const emailField = form.querySelector('input[name="email"]');
-    const companyField = form.querySelector('input[name="company"]');
 
-    if (firstNameField.value === '') {
-        const parentSibling = firstNameField.parentElement.nextElementSibling;
-        parentSibling.classList.add('sp-error-active');
-        return;
+    // Helper function to validate a field and toggle error state
+    const validateField = (field, validator = (value) => value !== '') => {
+        const errorElement = field.parentElement.nextElementSibling;
+        if (!validator(field.value)) {
+            errorElement.classList.add('sp-error-active');
+            return false;
+        }
+        errorElement.classList.remove('sp-error-active');
+        return true;
+    };
 
-    } else {
-        const parentSibling = firstNameField.parentElement.nextElementSibling;
-        parentSibling.classList.remove('sp-error-active');
+    // Sequentially validate fields
+    const fields = [
+        { field: form.querySelector('input[name="firstName"]') },
+        { field: form.querySelector('input[name="lastName"]') },
+        { field: form.querySelector('input[name="email"]'), validator: validateEmail },
+        { field: form.querySelector('input[name="company"]') },
+    ];
+
+    for (const { field, validator } of fields) {
+        if (!validateField(field, validator)) {
+            return; // Stop validation if a field fails
+        }
     }
 
-    if (lastNameField.value === '') {
-        const parentSibling = lastNameField.parentElement.nextElementSibling;
-        parentSibling.classList.add('sp-error-active');
-        return;
-
-    } else {
-        const parentSibling = lastNameField.parentElement.nextElementSibling;
-        parentSibling.classList.remove('sp-error-active');
-    }
-
-    if (emailField.value === '' || !validateEmail(emailField.value)) {
-        const parentSibling = emailField.parentElement.nextElementSibling;
-        parentSibling.classList.add('sp-error-active');
-        return;
-
-    }
-    else {
-        const parentSibling = emailField.parentElement.nextElementSibling;
-        parentSibling.classList.remove('sp-error-active');
-    }
-
-    if (companyField.value === '') {
-        const parentSibling = companyField.parentElement.nextElementSibling;
-        parentSibling.classList.add('sp-error-active');
-        return;
-
-    } else {
-        const parentSibling = companyField.parentElement.nextElementSibling;
-        parentSibling.classList.remove('sp-error-active');
-    }
-
-    // Check if all fields are valid
-    const isValid = [...inputs].every((input) => input.value !== '');
-    if (isValid) {
-        form.reset();
-    }
-
+    // If all fields are valid, reset the form
+    form.reset();
 };
+
 
 /**
  * Validates the email format.
