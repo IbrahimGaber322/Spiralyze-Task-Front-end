@@ -1,0 +1,86 @@
+:root {
+    --primary: #5bc8af;
+    --secondary: #297c6b;
+    --background: #194d44;
+    --faded: #eaeaea;
+    --text: #333;
+    --gradient1: #2a7d6c;
+    --gradient2: #3e69609e;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: white;
+}
+
+.ty-header {
+    background: var(--background);
+    padding: 20px;
+    text-align: center;
+}
+
+.ty-nav .ty-logo {
+    color: var(--faded);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.ty-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.ty-content {
+    max-width: 600px;
+    background: linear-gradient(180deg, var(--gradient1) 0%, var(--gradient2) 100%);
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ty-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ty-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #ffffffcc;
+}
+
+.ty-button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.ty-button:hover {
+    background: #4caf94;
+}
+
+.ty-footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--background);
+    color: var(--faded);
+    font-size: 0.875rem;
+}

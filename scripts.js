@@ -48,10 +48,12 @@ const handleFormSubmit = (event) => {
         }
     }
     const data = new FormData(form);
-    //log the form data
-    for (const [name, value] of data) {
-        console.log(`${name}: ${value}`);
-    }
+
+    const firstName = data.get('firstName');
+    const lastName = data.get('lastName');
+
+    // Redirect to thank you page with query parameters
+    window.location.href = `thank-you.html?firstName=${encodeURIComponent(firstName)}&lastName=${encodeURIComponent(lastName)}`;
     // If all fields are valid, reset the form
     form.reset();
 };
@@ -75,7 +77,7 @@ const openVideo = () => {
     const videoModal = document.getElementById('videoModal');
 
     // Set the YouTube video URL (replace VIDEO_ID with your YouTube video ID)
-    youtubeVideo.src = "https://www.youtube.com/embed/VIDEO_ID?autoplay=1";
+    youtubeVideo.src = "https://www.youtube.com/embed/7sjQzq45DDU";
 
     // Show the modal
     videoModal.style.display = "flex";

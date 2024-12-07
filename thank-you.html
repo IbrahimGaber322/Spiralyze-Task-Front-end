@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get an Intervention | Thank You</title>
+    <link rel="stylesheet" href="thank-you.css" />
+</head>
+
+<body>
+    <header class="ty-header">
+        <nav class="ty-nav">
+            <a href="index.html" class="ty-logo"><img src="./assets/logo.png" /></a>
+        </nav>
+    </header>
+
+    <main class="ty-main">
+        <div class="ty-content">
+            <h1>Thank You!</h1>
+            <div id="thankYouMessage"></div>
+            <a href="index.html" class="ty-button">Go Back to Home</a>
+        </div>
+    </main>
+
+    <footer class="ty-footer">
+        <p>&copy;2019 Get an Intervention Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Parse the query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const firstName = urlParams.get('firstName') || 'Valued';
+        const lastName = urlParams.get('lastName') || 'User';
+
+        const message = `<p>Thank you <strong>${firstName} ${lastName}</strong> for your submission!<br> We will be in touch shortly.</p>`;
+        document.getElementById('thankYouMessage').innerHTML = message;
+    </script>
+</body>
+
+</html>
