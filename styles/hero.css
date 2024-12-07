@@ -196,7 +196,7 @@
                             color: white;
                             font-size: 1.125rem;
                             border: 1px solid #d1d5db;
-                            background-color: #29594e;
+                            background-color: transparent;
                             border-radius: 2px;
                             outline: none;
                             transition: all 0.2s ease-in-out;
@@ -260,8 +260,7 @@
                 padding: 14px 16px;
                 background: #ffffff0a;
                 border: 1px solid #ffffff80;
-                color: #ffffffb2;
-                background-color: #ffffff0a;
+                color: white;
                 cursor: pointer;
                 appearance: none;
                 -webkit-appearance: none;
@@ -270,18 +269,38 @@
                 background-repeat: no-repeat;
                 background-position: right 16px center;
                 background-size: 24px;
+                font-size: 16px;
+                line-height: 19.5px;
+                border-radius: 4px;
+                transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
             }
 
-            select:focus {
+            .sp-hero__dropdown:hover {
+                background-color: rgba(255, 255, 255, 0.15);
+                border-color: #ffffffcc;
+            }
+
+            .sp-hero__dropdown:focus {
                 outline: none;
-                border-color: white;
+                border-color: #ffffff;
+                box-shadow: 0 0 0 1px #ffffff;
+                background-color: rgba(255, 255, 255, 0.1);
             }
 
-            select option {
+            .sp-hero__dropdown option {
                 background-color: rgba(62, 105, 96, 1);
-                padding: 5px;
-                border: 1px solid #ffffff80;
+                color: white;
+                font-size: 16px;
+                line-height: 19.5px;
+                border: none;
+                cursor: pointer;
             }
+
+            .sp-hero__dropdown option:hover {
+                background-color: rgba(62, 105, 96, 0.8);
+            }
+
+
 
             .sp-hero__cta-button {
                 align-self: center;

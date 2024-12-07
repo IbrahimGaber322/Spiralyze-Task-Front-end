@@ -47,7 +47,11 @@ const handleFormSubmit = (event) => {
             return; // Stop validation if a field fails
         }
     }
-
+    const data = new FormData(form);
+    //log the form data
+    for (const [name, value] of data) {
+        console.log(`${name}: ${value}`);
+    }
     // If all fields are valid, reset the form
     form.reset();
 };
